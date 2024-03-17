@@ -1,0 +1,76 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+  justify-content: space-between; /* Alinear los elementos a los extremos */
+}
+
+.topbar-brand {
+  flex: 1;
+}
+
+.logo {
+  max-width: 150px;
+  max-height: 50px;
+}
+
+.topbar-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar-nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.topbar-nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.topbar-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.topbar-actions {
+  display: flex; /* Cambiar a flex para permitir el alineamiento en dispositivos móviles */
+  align-items: center; /* Alinear verticalmente los elementos */
+}
+
+.topbar-actions button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.topbar-actions button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    padding: 10px; /* Reducir el espacio en dispositivos móviles */
+  }
+
+  .topbar-actions {
+    margin-left: auto;
+  }
+
+  .topbar-actions button {
+    font-size: 0.8em; /* Reducir el tamaño del texto en dispositivos móviles */
+  }
+}

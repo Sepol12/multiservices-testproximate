@@ -1,0 +1,55 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    transition: left 0.3s ease;
+    z-index: 1000; /* Asegura que la barra lateral esté sobre otros elementos */
+    overflow-y: auto; /* Añade scroll vertical si hay demasiados elementos */
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    margin-top: 4rem;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que el botón de alternar esté sobre la barra lateral */
+    background-color: #444;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+}
+
+.toggle-button:hover {
+    background-color: #555;
+}
+
+/* Estilos para los elementos de la lista */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5rem;
+}
+
+.sidebar li {
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+    background-color: #444;
+}
